@@ -89,6 +89,7 @@ namespace Battleships
         {
             Console.SetCursorPosition(_initialCursorPosition.Left, _initialCursorPosition.Top);
             Console.WriteLine(new string(' ', Console.WindowWidth));
+            Console.SetCursorPosition(_initialCursorPosition.Left, _initialCursorPosition.Top + 1);
             Console.WriteLine(new string(' ', Console.WindowWidth));
             Console.SetCursorPosition(_initialCursorPosition.Left, _initialCursorPosition.Top);
         }
