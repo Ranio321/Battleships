@@ -12,14 +12,15 @@ jobs:
     - uses: actions/checkout@v3
       with:
         fetch-depth: 0
+      working-directory: ./src
 
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 7.0.x
     - name: Install dependencies
-      run: dotnet restore
+      run: dotnet restore Battleships.UI/Battleships.UI.csproj
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build Battleships.UI/Battleships.UI.csproj --configuration Release --no-restore
     - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet test Battleships.sln --no-restore --verbosity normal
