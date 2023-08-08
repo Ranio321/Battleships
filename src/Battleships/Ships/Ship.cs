@@ -19,8 +19,8 @@ namespace Battleships.Ships
         public static Ship Create(ShipType type)
             => type switch
             {
-                ShipType.Destroyer => new Ship(5),
-                ShipType.Battleship => new Ship(4),
+                ShipType.Destroyer => new Ship(4),
+                ShipType.Battleship => new Ship(5),
                 _ => throw new NotImplementedException(),
             };
 
